@@ -41,7 +41,7 @@ void call (Map input) {
             Failed Test Count: ${failed}
             Failed Tests: ${name}
             Failed URL: ${BUILD_URL}
-            """,
+            """;
 
 
 	slackSend channel: slackChannel, color: color, message: message;
