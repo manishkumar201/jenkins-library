@@ -1,0 +1,6 @@
+
+            Test Start Date: `${BUILD_TIMESTAMP}`
+            Failed Job: `${JOB_NAME}`
+            Failed Test Count: `${failed}`
+            Failed Tests: `${name}`
+            Failed URL: `${BUILD_URL}`

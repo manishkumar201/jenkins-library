@@ -31,18 +31,8 @@ void call (Map input) {
 	this.BUILD_URL = input.BUILD_URL ?: "";
     assert BUILD_URL instanceof String : "channel should be a String, the current type is ${BUILD_URL.getClass()}";
 
-    this.message = "
-            Hi Team,
-            
-            Details of the test failure are as follows:
-            Test Execution ID: `${BUILD_NUMBER}`
-            Test Start Date: `${BUILD_TIMESTAMP}`
-            Failed Job: `${JOB_NAME}`
-            Failed Test Count: `${failed}`
-            Failed Tests: `${name}`
-            Failed URL: `${BUILD_URL}`
-            ";
+    this.message = " Hi Team, Details of the test failure are as follows: Test Execution ID: `${BUILD_NUMBER}`";
 
-
+    
 	slackSend channel: slackChannel, color: color, message: message;
 }
