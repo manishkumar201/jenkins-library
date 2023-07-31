@@ -31,7 +31,7 @@ void call (Map input) {
 	this.BUILD_URL = input.BUILD_URL ?: "";
     assert BUILD_URL instanceof String : "channel should be a String, the current type is ${BUILD_URL.getClass()}";
 
-    this.message = """
+    this.message = "
             Hi Team,
             
             Details of the test failure are as follows:
@@ -41,7 +41,7 @@ void call (Map input) {
             Failed Test Count: ${failed}
             Failed Tests: ${name}
             Failed URL: ${BUILD_URL}
-            """;
+            ";
 
 
 	slackSend channel: slackChannel, color: color, message: message;
