@@ -35,12 +35,12 @@ void call (Map input) {
             Hi Team,
             
             Details of the test failure are as follows:
-            Test Execution ID: ${BUILD_NUMBER}
-            Test Start Date: ${BUILD_TIMESTAMP}
-            Failed Job: ${JOB_NAME}
-            Failed Test Count: ${failed}
-            Failed Tests: ${name}
-            Failed URL: ${BUILD_URL}
+            Test Execution ID: `${BUILD_NUMBER}`
+            Test Start Date: `${BUILD_TIMESTAMP}`
+            Failed Job: `${JOB_NAME}`
+            Failed Test Count: `${failed}`
+            Failed Tests: `${name}`
+            Failed URL: `${BUILD_URL}`
             ";
 
 
