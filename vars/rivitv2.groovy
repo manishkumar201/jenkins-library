@@ -13,12 +13,8 @@ void call (Map input) {
 	// this.message = input.message ?: "";
     // assert message instanceof String : "channel should be a String, the current type is ${message.getClass()}";
 
-    this.BUILD_NUMBER = input.BUILD_NUMBER ?: "";
-    assert BUILD_NUMBER instanceof String : "channel should be a String, the current type is ${BUILD_NUMBER.getClass()}";
-
-	this.BUILD_TIMESTAMP = input.BUILD_TIMESTAMP ?: "";
-    assert BUILD_TIMESTAMP instanceof String : "channel should be a String, the current type is ${BUILD_TIMESTAMP.getClass()}";
-
+    this.BUILD_NUMBER = input.BUILD_NUMBER;
+	this.BUILD_TIMESTAMP = input.BUILD_TIMESTAMP;
 	this.JOB_NAME = input.JOB_NAME;
 	this.failed = input.failed;
 	this.name = input.name;
