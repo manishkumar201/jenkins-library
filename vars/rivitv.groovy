@@ -9,9 +9,9 @@ void call (Map input) {
 	assert slackChannel instanceof String : "channel should be a String, the current type is ${slackChannel.getClass()}";
 
 	String color = "danger";
-    String message = "message for slack";
-	// this.message = input.message ?: "";
-    // assert message instanceof String : "channel should be a String, the current type is ${message.getClass()}";
+    // String message = "message for slack";
+	this.message = input.message ?: "";
+    assert message instanceof String : "channel should be a String, the current type is ${message.getClass()}";
     
 
 
