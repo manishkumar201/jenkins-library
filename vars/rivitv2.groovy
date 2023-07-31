@@ -19,18 +19,10 @@ void call (Map input) {
 	this.BUILD_TIMESTAMP = input.BUILD_TIMESTAMP ?: "";
     assert BUILD_TIMESTAMP instanceof String : "channel should be a String, the current type is ${BUILD_TIMESTAMP.getClass()}";
 
-	this.JOB_NAME = input.JOB_NAME ?: "";
-    assert JOB_NAME instanceof String : "channel should be a String, the current type is ${JOB_NAME.getClass()}";
-
-	this.failed = input.failed ?: "";
-    assert failed instanceof String : "channel should be a String, the current type is ${failed.getClass()}";
-
-	this.name = input.name ?: "";
-    assert name instanceof String : "channel should be a String, the current type is ${name.getClass()}";
-
-	this.BUILD_URL = input.BUILD_URL ?: "";
-    assert BUILD_URL instanceof String : "channel should be a String, the current type is ${BUILD_URL.getClass()}";
-
+	this.JOB_NAME = input.JOB_NAME;
+	this.failed = input.failed;
+	this.name = input.name;
+	this.BUILD_URL = input.BUILD_URL;
     this.message = " Hi Team, Details of the test failure are as follows: Test Execution ID: `${BUILD_NUMBER}`";
 
     
