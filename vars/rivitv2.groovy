@@ -19,7 +19,8 @@ void call (Map input) {
 	this.failed = input.failed;
 	this.name = input.name;
 	this.BUILD_URL = input.BUILD_URL;
-    this.message = " Hi Team, Details of the test failure are as follows: Test Execution ID: `${BUILD_NUMBER}`";
+    this.message = " Hi Team, 
+	Details of the test failure are as follows: Test Execution ID: `${BUILD_NUMBER}`";
 
     
 	slackSend channel: slackChannel, color: color, message: message;
