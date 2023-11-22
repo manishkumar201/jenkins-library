@@ -1,11 +1,11 @@
 List call() {
-  def command = '''aws ec2 describe-instances --query 'Reservations[*].Instances[*].InstanceId' --output text'''
-  def process = command.execute()
-  process.waitFor()
+  def command = 'aws ec2 describe-instances --query Reservations[*].Instances[*].InstanceId --output text'
+  
+  // Run the command and capture the output
+  def instanceIdsString = sh(script: command, returnStdout: true).trim()
 
-  def instanceIds = []
-  process.text.getText().eachLine { line ->
-    instanceIds.addAll(line.tokenize())
-  }
+  // Tokenize the output to create a list of instance IDs
+  def instanceIds = instanceIdsString.tokenize()
+  
   return instanceIds
 }
